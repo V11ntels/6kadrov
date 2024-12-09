@@ -3,14 +3,16 @@ import AppDataSource from './config/database.js';
 
 const PORT = 3000;
 
-async () => {
+(async () => {
     try {
         await AppDataSource.initialize();
 
         app.listen(PORT, () => {
             console.log('Начало руководство маршрутом');
         });
-    } catch {
+    } catch (e) {
+        console.log(e);
+
         console.error('Ошибка при подключении к базе данных');
     }
-};
+})();
