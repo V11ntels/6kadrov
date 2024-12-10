@@ -9,7 +9,7 @@ const AppDataSource = new DataSource({
     database: 'blog', // Имя базы данных
     synchronize: false, // Автоматическое обновление структуры базы (только для разработки)
     logging: true, // Логирование запросов
-    entities: ['./src/entities/*.js'], // Пути к сущностям
+    entities: ['./**/entities/*.js'], // Пути к сущностям
 });
 
 export default AppDataSource;
